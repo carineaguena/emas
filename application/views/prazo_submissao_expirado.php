@@ -1,0 +1,1 @@
+                <h1 style="color: red;">O prazo de submissão de trabalhos está encerrado.</h1>

@@ -1,0 +1,2 @@
+                <p class="msg erro">O link para cadastro de novo submissor está incorreto.<br>Verifique se o link da barra de endereços do navegador coincide com o link completo enviado para o seu e-mail.<br>Se o problema persistir, tente refazer seu pré-cadastro clicando no botão abaixo.</p>
+                <p class="botoes"><a href="<?php echo base_url();?>submissao/submissor/precadastro" class="btn btn-primary">Refazer pré-cadastro</a></p>
