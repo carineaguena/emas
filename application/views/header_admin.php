@@ -57,7 +57,12 @@
                 <li><a href="<?php echo base_url(); ?>admin/usuario">Usuários</a></li>
               </ul>
             </li>
-          </ul>
+      
+          <li <?php echo ( $link_nav == 'emissao_certificados' ) ? ' class="dropdown active"' : ' class="dropdown"'; ?>><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emissão de Certificados <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="<?php echo base_url(); ?>admin/emitir_certificado">Emitir Certificado</a></li>
+              </ul>
+            </li>
           <ul class="nav navbar-nav navbar-right">
               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="<?php echo $user->nome_usuario;?>"><i class="glyphicon glyphicon-user"> </i> <?php echo $user->login_usuario;?> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">

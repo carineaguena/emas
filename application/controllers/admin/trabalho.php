@@ -24,6 +24,8 @@ class Trabalho extends CI_Controller
 
     public function index()
     {
+
+
         $trabalhos = $this->Trabalhos->getAll($this->em->getEvent()->id);
 
         $trabalhos = $this->complementaDados($trabalhos);
@@ -53,6 +55,7 @@ class Trabalho extends CI_Controller
                 ]
             });
         ";
+
 
         $this->load->view('template_admin', $data);
     }

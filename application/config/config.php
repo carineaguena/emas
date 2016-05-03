@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '/../emas/';
+// a url padrao pode ser o caminho absoluto http://www.ifc-camboriu.edu.br/emas 
+$config['base_url']	= 'http://localhost/emas/';
 
 /*
 |--------------------------------------------------------------------------

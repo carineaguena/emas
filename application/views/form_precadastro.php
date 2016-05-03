@@ -1,4 +1,4 @@
-                <p class="info">Preencha seu e-mail no campo abaixo. O sistema enviará para seu e-mail uma mensagem contendo um link personalizado para você proceder com o restante do cadastro como submissor de trabalhos. Verifique a pasta de spam da sua caixa de e-mails, caso não receba a mensagem.</p>
+                <p class="info">Preencha seu e-mail no campo abaixo. O sistema enviará para seu e-mail uma mensagem contendo um link personalizado para você proceder com o restante do cadastro. Verifique a pasta de spam da sua caixa de e-mails, caso não receba a mensagem.</p>
                 <?php
                 if (isset($erro)) {
                 ?>
@@ -8,7 +8,7 @@
                 ?>
                 <form role="form" method="post" id="form">
                     <fieldset>
-                        <legend>Dados do submissor</legend>
+                        <legend>Dados do usuário</legend>
                         <div class="form-group">
                             <label for="email">e-mail</label>
                             <input type="text" id="email" name="email" class="form-control" placeholder="e-mail">
