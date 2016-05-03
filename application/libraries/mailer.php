@@ -17,7 +17,7 @@ class Mailer
         $config['type']     = 'text';
         $this->ci->email->initialize($config);
 
-        $this->ci->email->from('fice@ifc-camboriu.edu.br', 'VI FICE - IFC-Camboriú');
+        $this->ci->email->from('fice@ifc-camboriu.edu.br', 'VII FICE - IFC-Camboriú');
         $this->ci->email->to($dest);
         $this->ci->email->subject($subject);
         $this->ci->email->message($message);

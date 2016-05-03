@@ -85,8 +85,8 @@ class Submissor extends CI_Controller
 
         //die($link);
 
-        $message = "Acesse o link abaixo e complete seu cadastro como submissor:\n\n$link\n\nAtenciosamente,\nComissão Organizadora\nVI FICE - IFC-Camboriú";
-        $subject = 'Cadastro como submissor de trabalhos da VI FICE do IFC-Camboriú';
+        $message = "Acesse o link abaixo e complete seu cadastro como submissor:\n\n$link\n\nAtenciosamente,\nComissão Organizadora\nVII FICE - IFC-Camboriú";
+        $subject = 'Cadastro como submissor de trabalhos da VII FICE do IFC-Camboriú';
 
         $this->mailer->enviarEmail($email, $subject, $message);
 
