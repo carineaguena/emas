@@ -1,10 +1,10 @@
-<ol class="breadcrumb">
-	<li class="active">Trabalhos</li>
-</ol>                
-                
- <div class="form-group">
 
- <table class="table table-striped table-condensed" id="listagem">
+<h2>Bem-vindo!</h2>
+<p>Você já é um avaliador da VII FICE - Feira de Iniciação Científica e Extensão.</p>
+<p>Acompanhe os colaborares cadastrados na lista abaixo, agradecemos sua participação.</p>
+
+<div class="modal-content"> 
+    <table class="table table-striped table-condensed" id="listagem">
 
                     <thead>
                         <tr>
@@ -41,7 +41,8 @@
                 </table>
 </div>
 
+<div class="modal-footer">
 <form role="form" method="post" action="<?php echo base_url();?>avaliacao/login/sair">
-	<button type="submit" class="btn btn-primary">Sair</button>
-</form>
-
+    <button type="submit" class="btn btn-primary">Sair</button>
+</form> 
+ </div>

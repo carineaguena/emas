@@ -36,20 +36,28 @@ class Sucesso extends CI_Controller
         $data['user'] = $this->auth->get_usuario_logado();
         $data['event'] = $this->em->getEvent();
         $data['title'] = 'Avaliadores';
-        $data['content'] = 'sucesso';
-        $data['avaliadores'] = $this->Avaliadores->getAll();
+        
+     
 
-        $data['additional_script'] = "
-            $('#listagem').dataTable({
-                    \"order\": [ 1, 'asc' ],
-                    \"paging\": true,
-                    \"searching\": false,
-                    \"columnDefs\": [
-                        { \"orderable\": true, \"targets\": [7] }
-                ]
-            });
-        ";
         $data['scripts'] = array('avaliadores');
+		$data['content'] = 'sucesso';
+        $data['avaliadores'] = $this->Avaliadores->getAll();
+		$data['additional_script'] = "
+           $(document).ready(function() {
+            var t = $('table').dataTable({
+                    \"columnDefs\": [ { 
+                    \"targets\": 0 }
+                	],
+                    \"order\": [ 0, 'asc' ],
+                    \"searching\": true,
+                    \"paging\": true            	
+            });
+
+
+		} );
+        ";
+
+
 
         $this->load->view('template_avaliador', $data);
     }
