@@ -2,9 +2,12 @@
 
 class Sucesso extends CI_Controller
 {
+
 	public function __construct()
     {
         parent::__construct();
+
+        $this->auth->verificar_login('avaliacao');
 
         $this->load->model('Areas');
         $this->load->model('Instituicoes');
@@ -25,6 +28,8 @@ class Sucesso extends CI_Controller
 
     public function index()
     {
+	
+
         $erro = $this->session->flashdata('erro');
         if ($erro) {
             $data['erro'] = $erro;
@@ -33,7 +38,8 @@ class Sucesso extends CI_Controller
         if ($msg) {
             $data['msg'] = $msg;
         }
-        $data['user'] = $this->auth->get_usuario_logado();
+
+		$data['user'] = $this->auth->get_usuario_logado();
         $data['event'] = $this->em->getEvent();
         $data['title'] = 'Avaliadores';
         

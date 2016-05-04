@@ -25,6 +25,7 @@ class Login extends CI_Controller
 		if ($msg) {
 			$data['msg'] = $msg;
 		}
+
 		$data['event']   = $this->em->getEvent();
 		$data['title']   = 'Identificação do Avaliador';
 		$data['content'] = 'identificacao_avaliador';
@@ -36,6 +37,7 @@ class Login extends CI_Controller
 		//$this->session->keep_flashdata('origem');
 
 		$this->load->view('simpletemplate', $data);
+		//$this->load->view('template_avaliador', $data);
 	}
 
 	public function autenticar()
@@ -56,7 +58,7 @@ class Login extends CI_Controller
 		{
 			$this->session->set_flashdata('erro', 'e-mail não encontrado.');
 			//$this->session->keep_flashdata('origem');
-			redirect(base_url().'avalicao/login/identificar');
+			redirect(base_url().'avaliacao/login/identificar');
 			return FALSE;
 		}
 
@@ -72,7 +74,7 @@ class Login extends CI_Controller
 
 		$this->Avaliadores->update($avaliador->id, $dados);
 
-		$avaliador->tipo = 'S';
+		$avaliador->tipo = 'V';
 
 		//log_message('INFO', 'Autenticação do usuário: ' . $usuario->nome);
 		$this->auth->set_usuario_logado($avaliador);
