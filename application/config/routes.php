@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "home";
-$route['submissao'] = "submissao/trabalho";
+//$route['submissao'] = "submissao/trabalho";
 $route['submissao/nova'] = "submissao/home";
 $route['avaliacao'] = "avaliacao/home";
 $route['admin'] = "admin/home";

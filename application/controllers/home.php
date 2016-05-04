@@ -6,8 +6,8 @@ class Home extends CI_Controller
     {
         $data['event'] = $this->em->getEvent();
         $data['title'] = 'Home';
-        //$data['content'] = 'home_emas';
-        $data['content'] = 'home';
+        $data['content'] = 'home_emas';
+        //$data['content'] = 'home';
         $data['module'] = 'base';
 
         $this->load->view('simpletemplate', $data);
