@@ -147,6 +147,7 @@ class Avaliador extends CI_Controller
     private function setFormValidationRules()
     {
         $this->form_validation->set_rules('nome', 'Nome', 'required');
+        $this->form_validation->set_rules('telefone', 'Telefone', 'required');
         $this->form_validation->set_rules('titulacao', 'Titulacao', 'required');
         $this->form_validation->set_rules('email', 'e-mail', 'required|valid_email');
         $this->form_validation->set_rules('id_instituicao', 'Instituição', 'required');
