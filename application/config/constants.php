@@ -37,7 +37,7 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
-define('FILES_PATH', '/var/www/emas/trabalhos/'); // caminho para as imagens armazenadas pela aplicação (upload)
+define('FILES_PATH', '../emas/trabalhos/'); // caminho para as imagens armazenadas pela aplicação (upload)
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

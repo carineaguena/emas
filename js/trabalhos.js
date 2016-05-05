@@ -2,8 +2,8 @@ var instituicao_select_destino = null;
 
 function reenviarArquivos(id)
 {
-    alert('Prazo de submissão encerrado. Não é possível reenviar os arquivos.');
-    return false;
+    //alert('Prazo de submissão encerrado. Não é possível reenviar os arquivos.');
+    //return false;
     $('#id_trabalho').val(id);
     $('#arquivo_doc').val('');
     $('#arquivo_pdf').val('');

@@ -66,7 +66,8 @@ class Trabalho extends CI_Controller
         $data['user'] = $this->auth->get_usuario_logado();
         $data['event'] = $evento;
         $data['title'] = 'Submissão de trabalho';
-        $data['content'] = 'prazo_submissao_expirado';//'form_trabalho';
+        $data['content'] = 'form_trabalho';
+        //$data['content'] = 'prazo_submissao_expirado';//'form_trabalho';
         $data['categorias'] = $this->Categorias->getAll($evento->id);
         $data['niveis'] = $this->Niveis->getAll($evento->id);
         $data['tipos'] = $this->Tipostrabalho->getAll($evento->id);
@@ -92,7 +93,8 @@ class Trabalho extends CI_Controller
         $data['event'] = $evento;
         $data['trabalho'] = $this->Trabalhos->get($id);
         $data['title'] = 'Alteração de dados do trabalho';
-        $data['content'] = 'prazo_submissao_expirado';//'form_trabalho';
+        $data['content'] = 'form_trabalho';
+        //$data['content'] = 'prazo_submissao_expirado';//'form_trabalho';
         $data['instituicoes'] = $this->Instituicoes->getAll();
         $data['categorias'] = $this->Categorias->getAll($evento->id);
         $data['tipos'] = $this->Tipostrabalho->getAll($evento->id);
@@ -111,7 +113,7 @@ class Trabalho extends CI_Controller
 
     public function gravar()
     {
-        die();
+        //die();
 
         $this->setValidationRules();
 
@@ -329,11 +331,11 @@ class Trabalho extends CI_Controller
 
         switch($fileType) {
             case 'doc':
-                $path_to_file = '/var/www/htdocs/vfice2014/inscricao/uploads/' . $trabalho->trab_doc;
+                $path_to_file = '/var/www/vfice2014/inscricao/uploads/' . $trabalho->trab_doc;
                 $filename = $trabalho->trab_doc;
                 break;
             case 'pdf':
-                $path_to_file = '/var/www/htdocs/vfice2014/inscricao/uploads/' . $trabalho->trab_pdf;
+                $path_to_file = '/var/www/vfice2014/inscricao/uploads/' . $trabalho->trab_pdf;
                 $filename = $trabalho->trab_pdf;
         }
 
